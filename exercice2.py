@@ -17,9 +17,9 @@ width = 450
 
 cropped_img =
 
-# Tracez un histogramme des valeurs des pixels de l'image par bande
+# Tracez un histogramme par bande spectrale RGB des valeurs pixels (installer matplolib pour les visualiser) avec numpy ou opencv
 
-# Analysez l'histogramme pour segmenter le chateau avec un seuil
+# Analysez les histogrammes pour segmenter le chateau avec un seuil
 
 # Enregistrez vos resultats
 
