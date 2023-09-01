@@ -29,12 +29,22 @@ Dans le cas de commandes, ou d'établissement de votre environnement de travail,
 
 ## Exercice 1
 !! Attention à bien faire un commit après chaque étape !!
+
 1. Chargez une image binaire 640x480 en nuance de gris
-
 2. Normalisez cette image sur 8 bits
-
 3. Enregistrez le résultat au format png
 
 Résultat souhaité:
 ![Image finale](resources/resultat_exercice1.png)
 
+## Exercice 2
+!! Attention à bien faire un commit après chaque étape !!
+
+1. Chargez l'image
+2. Tracez un histogramme des valeurs des pixels de l'image par bande spectrale (RGB)
+3. Affichez la taille de l'image
+4. Cropez l'image autour du château aux dimensions ci-dessous
+5. Analysez l'histogramme pour segmenter le chateau avec un seuil
+6. Enregistrez vos resultats
+
+Dans les cas ou vous n'arrivez pas à coder les exercices vous pouvez expliquer la démarche que vous auriez appliqué.
