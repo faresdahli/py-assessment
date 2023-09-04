@@ -9,22 +9,30 @@ Dans le cas de commandes, ou d'établissement de votre environnement de travail,
 ## Mise en place de l'exercice (Git, python3)
 1. Avec github, faites un fork de ce repo
 
+  - Aller sur la page du dépôt original ("repo") sur GitHub.
+  - Cliquer sur le bouton "Fork" pour créer une copie du dépôt
   ...
    
 3. Clonez votre fork sur votre appareil
    
+  - Télécharger le fork du dépot sur la machine
   ...
    
 4. Créez une branche que vous nommerez comme vous voulez
 
+  - Créer une branche appelée "fares" dans notre cas
   ...
 
 6. Créez un environnement virtuel nommé "env" avec pip3 et venv et activez le
 
+  dans le terminal et le dossier du dépôt : 
+    python -m venv env
+    .\env\Scripts\activate
   ...
 
 7. Installez les "requirements" pour cet environnement
 
+  pip install -r requirements.txt
 ...
 
 ## Exercice 1
