@@ -22,3 +22,4 @@ thermal_img = thermal_data.reshape(IMG_HEIGHT, IMG_WIDTH)
 normalized_img = cv2.normalize(thermal_img, None, 0, 255, cv2.NORM_MINMAX, dtype=cv2.CV_8U)
 
 # Enregistrer l'image normalisée au format png
+cv2.imwrite('normalized_image.png', normalized_img)
