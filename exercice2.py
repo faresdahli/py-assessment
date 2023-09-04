@@ -59,11 +59,12 @@ combined_mask_2 = cv2.bitwise_and(combined_mask_2, mask_b_2)
 
 
 combined_mask = cv2.bitwise_or(combined_mask_1, combined_mask_2)
-result = cv2.bitwise_and(cropped_img, cropped_img, mask=combined_mask)
+segmented_img = cv2.bitwise_and(cropped_img, cropped_img, mask=combined_mask)
 
-cv2.imshow('Segmentation du Chateau', result)
+cv2.imshow('Segmentation du Chateau', segmented_img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
 # Enregistrez vos resultats
-
+cv2.imwrite("cropped_image.png", cv2.cvtColor(cropped_img, cv2.COLOR_RGB2BGR))  # Conversion de nouveau en BGR pour l'enregistrement
+cv2.imwrite("segmented_image.png", segmented_img)
