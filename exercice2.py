@@ -24,6 +24,19 @@ y_bottom = y_top + height
 cropped_img = img_rgb[y_top:y_bottom, x_top:x_bottom]
 
 # Tracez un histogramme par bande spectrale RGB des valeurs pixels (installer matplolib pour les visualiser) avec numpy ou opencv
+import matplotlib.pyplot as plt
+
+
+colors = ('r', 'g', 'b')
+for i, col in enumerate(colors):
+    histogram, bin_edges = np.histogram(
+        cropped_img[:, :, i], bins=256, range=(0, 255)
+    )
+    plt.plot(bin_edges[0:-1], histogram, color=col)
+    plt.title("Histogramme pour la bande couleur {}".format(col))
+    plt.xlabel('Valeur de pixel')
+    plt.ylabel('Nombre de pixels')
+    plt.show()
 
 # Analysez les histogrammes pour segmenter le chateau avec un seuil
 
