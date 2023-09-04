@@ -59,5 +59,5 @@ Dans les cas ou vous n'arrivez pas à coder les exercices vous pouvez expliquer 
 
 
 ## Documentation
-https://blog.gitnux.com/code/python-reading-binary-files/
-https://realpython.com/python-opencv-color-spaces/
+- https://blog.gitnux.com/code/python-reading-binary-files/
+- https://realpython.com/python-opencv-color-spaces/
