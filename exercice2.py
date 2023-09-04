@@ -40,5 +40,30 @@ for i, col in enumerate(colors):
 
 # Analysez les histogrammes pour segmenter le chateau avec un seuil
 
+# En se basant sur l'analyse des histogrammes, on suppose identifier ces plages pour la couleur du chateau
+
+mask_r_1 = cv2.inRange(cropped_img[:, :, 0], 50, 150)
+mask_g_1 = cv2.inRange(cropped_img[:, :, 1], 50, 85)
+mask_b_1 = cv2.inRange(cropped_img[:, :, 2], 100, 130)
+
+mask_r_2 = cv2.inRange(cropped_img[:, :, 0], 150, 255)
+mask_g_2 = cv2.inRange(cropped_img[:, :, 1], 0, 255)
+mask_b_2 = cv2.inRange(cropped_img[:, :, 2], 0, 255)
+
+# On combine les masques pour obtenir la couleur du chateau
+combined_mask_1 = cv2.bitwise_and(mask_r_1, mask_g_1)
+combined_mask_1 = cv2.bitwise_and(combined_mask_1, mask_b_1)
+
+combined_mask_2 = cv2.bitwise_and(mask_r_2, mask_g_2)
+combined_mask_2 = cv2.bitwise_and(combined_mask_2, mask_b_2)
+
+
+combined_mask = cv2.bitwise_or(combined_mask_1, combined_mask_2)
+result = cv2.bitwise_and(cropped_img, cropped_img, mask=combined_mask)
+
+cv2.imshow('Segmentation du Chateau', result)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
 # Enregistrez vos resultats
 
