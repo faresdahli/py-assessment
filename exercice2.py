@@ -7,7 +7,10 @@ img_path = "resources/chateau.png"
 img = cv2.imread(img_path)
 
 # Affichez la taille de l'image
-print()
+print(f"Dimensions de l'image : {img.shape[1]}x{img.shape[0]}")
+
+# Conversion de l'image de BGR (OpenCV utilise BGR par défaut) en RGB pour l'analyse ultérieure
+img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
 # Cropez l'image autour du chateau au dimension ci-dessous
 x_top = 950
