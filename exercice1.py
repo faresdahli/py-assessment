@@ -19,6 +19,6 @@ thermal_data = np.frombuffer(buffer, dtype=np.uint16)
 thermal_img = thermal_data.reshape(IMG_HEIGHT, IMG_WIDTH)
 
 # Faites une normalisation MIN/MAX sur 8 bits de l'image (utiliser opencv)
-normalized_img = 
+normalized_img = cv2.normalize(thermal_img, None, 0, 255, cv2.NORM_MINMAX, dtype=cv2.CV_8U)
 
 # Enregistrer l'image normalisée au format png
