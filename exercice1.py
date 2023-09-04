@@ -11,8 +11,12 @@ with open("resources/thermal_img_640x480_16bits_grayscale.bin", 'rb') as file:
 
 # Astuce une image est une matrice (numpy est une librairie interressante quand il est question de matrice)
 # https://numpy.org/doc/stable/reference/arrays.ndarray.html
-thermal_img = 
 
+# Conversion du buffer en un tableau numpy de type uint16 (entier non signé sur 16 bits)
+thermal_data = np.frombuffer(buffer, dtype=np.uint16)
+
+# Redimensionnement du tableau pour obtenir une matrice de 640x480
+thermal_img = thermal_data.reshape(IMG_HEIGHT, IMG_WIDTH)
 
 # Faites une normalisation MIN/MAX sur 8 bits de l'image (utiliser opencv)
 normalized_img = 
