@@ -56,3 +56,8 @@ Résultat souhaité:
 6. Enregistrez vos resultats
 
 Dans les cas ou vous n'arrivez pas à coder les exercices vous pouvez expliquer la démarche que vous auriez appliqué.
+
+
+## Documentation
+https://blog.gitnux.com/code/python-reading-binary-files/
+https://realpython.com/python-opencv-color-spaces/
